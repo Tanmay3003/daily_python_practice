@@ -1,0 +1,43 @@
+def is_prime(num):
+    if num <= 1:
+        return "Invalid input"
+    for i in range(2,int(num**0.5)+1):
+        if num % i == 0:
+            return False
+    return True
+def is_even(num):
+    return num % 2 == 0
+def mul_table(num):
+    for i in range(0,11):
+        print(f"{n}x{i} = {num*i}")
+def factorial(num):
+    result = 1
+    for i in range(2, n+1):
+        result *= i
+    return result
+
+while True:
+    print("     Numbers Tool     ")
+    print("1.Check for Prime")
+    print("2.Check Even")
+    print("3.Check multiplication Table")
+    print("4.Check Factorial")
+    print("5.Exit")
+    
+    choice = input("Choose 1 - 5 ")
+    
+    if choice == "5":
+        print("Exiting Program")
+        break
+        
+    n = int(input("Enter a number: "))
+    if choice == "1":
+        print("Prime: ",is_prime(n))
+    elif choice == "2":
+        print("Even: " if is_even(n) else "Odd")
+    elif choice == "3":
+        print(mul_table(n))
+    elif choice == "4":
+        print("Factorial: ",factorial(n))
+    else:
+        print("Invaild Choice")
