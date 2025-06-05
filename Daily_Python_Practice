@@ -1,0 +1,20 @@
+#Get cubes function
+def get_cubes(lst):
+    result = []
+    for i in lst:
+        result.append(i*i*i)
+    return result
+    
+print(get_cubes([2,3,4]))
+
+#Get vowels count function
+def get_vowels(word_list):
+    output = []
+    count = 0
+    for i in word_list:
+        for n in i:
+            if n.lower() in ("a","e","i","o","u"):
+                output.append(n)
+                count +=1
+    return output,count
+print(get_vowels(["hello", "world"]))
