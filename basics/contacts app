@@ -1,0 +1,32 @@
+#Basic Contacts App using Dictonaries 
+contacts = {"A":123456789,"B":234567890,"C":345678901,"D":456789012,"E":567890123}
+
+while True:
+    print("     Contact Book     ")
+    print("1.Add Contact")
+    print("2.View All")
+    print("3.Search")
+    print("4.Exit")
+    
+    choice = input("Enter your choice: ")
+    
+    if choice == "1":
+        name = input("Enter Name: ")
+        number = int(input("Enter Number: "))
+        contacts[name] = number
+        print("Contact Added")
+    
+    elif choice == "2":
+        print(contacts)
+        
+    elif choice == "3":
+        s_name = input("Find: ")
+        if s_name in contacts:
+            print(f"{s_name}:{contacts[s_name]}")
+    
+    elif choice == "4":
+        print("Exiting App")
+        break
+    
+    else:
+        print("Invalid Input")
